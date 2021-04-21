@@ -40,29 +40,29 @@ The same as above but will show all samples in the 4 minutes before 23:58 groupi
 
 Filtering by label
 
-All labels
-api_request_total
+All labels  
+```api_request_total```
 
-Code equals 200
-api_request_total{code = "200"}
+Code equals 200  
+```api_request_total{code = "200"}```
 
-Code not equals 200
-api_request_total{code != "200"}
+Code not equals 200  
+```api_request_total{code != "200"}```
 
-Regular Expression
-api_request_total{method =~ "GET|POST"}
+Regular Expression  
+```api_request_total{method =~ "GET|POST"}```
 
-Combined
-api_request_total{method =~ "GET|POST", code = "200"} 
+Combined  
+```api_request_total{method =~ "GET|POST", code = "200"}```
 
 Filtering counters
 
-Returns the average by second in a range of 10 minutes
-rate(go_memstats_frees_total[10m])
+Returns the average by second in a range of 10 minutes  
+```rate(go_memstats_frees_total[10m])```
 
-Returns how much the metric increased by minute
-increase(go_memstats_frees_total[1m])
+Returns how much the metric increased by minute  
+```increase(go_memstats_frees_total[1m])```
 
 Aggregators
-Sums the samples grouping by status code
-sum(app_request_total) by (statusCode)
+Sums the samples grouping by status code  
+```sum(app_request_total) by (statusCode)```
