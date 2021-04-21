@@ -1,0 +1,1 @@
+The script [```stress.sh```](stress.sh) generates requests to to app to generate metrics.
